@@ -1,0 +1,1018 @@
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+*
+{
+    box-sizing: border-box;
+}
+html
+{
+    scroll-behavior: smooth;
+    font: 400 10px/1.2 'Montserrat';
+}
+
+.header
+{
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: relative !important;
+    padding: 2em 0 5em 0;
+    
+
+    
+}
+.nav--mine
+{
+    display: flex;
+    justify-content: space-between;
+    
+    @media screen and (max-width: 992px) {
+        nav
+        {
+            width: 100%;
+            z-index: 5;
+            
+        }
+    }
+    
+}
+.head_info
+{
+    width: 70%;
+    max-width: 960px;
+    @media screen and (max-width:320px)
+        {
+            width: 90%;   
+        }
+    text-align: left;
+    padding: 15em 0 8em 0;
+    
+    &__title
+    {
+        font-size: 5rem;
+        @media screen and (max-width:768px)
+        {
+            font-size: 4rem;    
+        }
+        @media screen and (max-width:576px)
+        {
+            font-size: 3rem;    
+        }
+       
+        color: $white;
+        margin: 0;
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 1.2em;
+        &::after
+        {
+            content: "";
+            display: block;
+            width: 60%;
+            position: absolute;
+            padding-top: 0.4em;
+            left: 0;
+            border-bottom: 5px solid $white;
+        }
+    }
+    &__descr
+    {
+        color: $white;
+        font-size: 2rem;
+        @media screen and (max-width:768px)
+        {
+            font-size: 1.6rem;    
+        }
+        @media screen and (max-width:320px)
+        {
+            font-size: 1.6rem;   
+        }
+        text-align: left;
+        font-weight: 300;
+        line-height: 1.5em;
+        font-family: 'Raleway';
+    }
+}
+a.btn
+{
+    width: 40%;
+    @media screen and (min-width:992px)
+    {
+        width: 30%;    
+    }
+    @media screen and (max-width:520px)
+    {
+        width: 70%;    
+    }
+}
+.btn
+{
+    outline: none;
+    text-decoration: none;
+    display: block;
+    padding: 1rem 3rem;
+    font-size: 1.6em;
+    @media screen and (max-width:768px)
+        {
+            font-size: 1.4rem;  
+            padding: 0.8em 1.2em;  
+        }
+    color: $white;
+    font-family: 'Raleway';
+    font-weight: 700;
+    border: 2px solid transparent;
+    background-color:$d-blue;
+    box-shadow: 0 0 10px rgba(155, 151, 151, 0.9);
+    @include hover
+    {
+        border-color: $d-blue;
+        background-color: transparent;
+        color: $d-blue;
+    }
+    &--head
+    {
+        margin: 2.8em 0; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        @include hover
+    {
+        border-color: $d-blue;
+        background-color: transparent;
+    }
+    }
+}
+.scroll
+{
+    position: absolute;
+    @include media(768px)
+    {
+        bottom: 30px;
+    }
+    svg
+    {
+        @include media(576px)
+        {
+            width: 17px !important;
+            height: 28px !important;
+        }
+    }
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    fill: $white;
+    @include hover{
+        fill: #000;
+    }
+}
+.navbar--mine
+{
+    margin: 0;
+    list-style-type: none;
+    background-color: transparent;
+    @media screen and (max-width: 992px) 
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+       
+        background-color: rgba(130, 136, 144, 0.5);
+        
+    }
+    
+    &__logo
+    {
+        display: flex;
+        align-items: center;
+        
+        svg
+        {   
+            fill: $logo-c;
+        
+        }
+        span
+        {
+            margin-left: 1.2rem;
+            color: $logo-c;
+            font-family: $logo;
+            font-size: 3.8rem;  
+        }
+       @include hover
+       {
+           svg
+           {
+                transition: all .4s ease-in-out;
+                fill: $white;
+           }
+           span
+           {
+                transition: all .4s ease-in-out;
+                color: $white;
+           }
+       }
+        
+    }
+    li
+    {
+        padding: 0.5em;
+    }
+    a
+    {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+        text-transform: uppercase;
+        padding: 0 1em !important;
+        display: block;
+        text-decoration: none;
+        @include hover
+        {
+            transition: all .3s ease-in-out;
+            color: $logo-c;
+        }
+        @media screen and (max-width: 992px) 
+        {
+            color: $logo-c;  
+            @include hover
+            {
+                background-color: $logo-c ;
+                color: $light-b;
+            }
+        }
+    }
+    
+}
+.navbar-light button
+    {
+        width: 64px;
+        height: 64px;
+        z-index: 11;
+        @include hover
+        {outline: none;}
+    }
+@media screen and (max-width: 992px)
+{
+    .navbar--mine
+        {
+            background-color: rgba(130, 136, 144, 0.5);
+            text-align: center;
+        }
+    .navbar-toggler.collapsed, .navbar-toggler:not(.collapsed)
+    {
+        position: absolute;
+        right: 10%;
+        top: 0%;
+    }
+    
+}
+.main
+{
+    background-color: $white;;
+}
+// Sidebar styles
+.sidebar--left
+{
+    padding: 15px 15px 15px 0;
+    background-color: rgb(237, 237, 238);
+    @media screen and (max-width: 576px)
+    {
+        display: none;
+    }
+    @media screen and (max-width: 768px)
+    {
+        padding: 5px;
+    }
+}
+// Categories
+h4
+{
+    font-size: 1.8rem;
+    color: $d-blue;
+    text-align: left;
+    margin: 0;
+    padding-left: 10px;
+}
+.widget
+{
+    padding: 10px 0 0 0;
+}
+.widget_search
+{
+    form
+    {
+        margin: 14px 0 20px 10px;
+        
+    }
+    .screen-reader-text
+    {
+        display: none;
+    }
+    input#s
+    {
+        padding: 10px 40px 10px 5px;
+	    border:none;
+        width: 100%;
+        min-width: 150px;
+        border-radius: 3px;
+        font-size: 1.4rem;
+        content: "Search here...";
+    }
+    input#searchsubmit
+    {
+        background:url(../img/search-icon.png) no-repeat;
+        border:none;
+        font-size: 0;
+	    cursor:pointer;
+	    width:18px;
+	    height:18px;
+        margin: 0;
+        padding: 0;
+        float: right;
+        position: relative;
+        top: -25px;
+        right: 18px;
+    }
+}
+.widget_categories
+{
+    margin: 0 0 20px 0;
+    @media screen and (max-width: 768px)
+    {
+       margin: 0;
+    } 
+    ul
+    {
+        list-style-type: none;
+        padding: 5px 0;
+        margin: 0;
+        color: $logo-c;
+        font-weight: 700;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        line-height: 1.4em;
+        @media screen and (max-width: 767px)
+        {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+        }
+        @media screen and (max-width: 645px)
+        {
+            text-align: center;
+        }
+        li
+        {
+            padding: 15px 10px 15px 50px;
+            border-bottom: 1px solid #dddcdc;
+            a
+                {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            @include hover
+            {
+                background-color: $logo-c;
+                color: $white;
+            }
+            @media screen and (max-width: 768px)
+            {
+                padding: 15px;
+                border: none;   
+            }
+            @media screen and (max-width: 645px)
+            {
+                margin: auto;
+                padding: 10px 0;
+            }
+        }
+    }
+    
+}
+
+.h2__title
+{
+    font-weight: 700;
+        margin: 0;
+        font-size: 4rem;
+        @media screen and (max-width: 768px)
+        {
+            font-size: 3rem;
+        }
+        @media screen and (max-width: 320px)
+        {
+            font-size: 2rem;
+        }
+        color: $logo-c;
+        &:after
+        {
+            content: '';
+            display: block;
+            margin-top: 20px;
+            width: 40%;
+            border-bottom: 2px solid #e8e8e8;
+
+        }
+}
+.why_us
+{
+    padding: 40px 50px 80px 50px;
+    @media screen and (max-width:576px)
+        {
+            padding: 40px 0px 80px 0px;  
+        }
+    
+    &__title
+    {
+        
+        margin: 0;
+        
+    }
+    &__descr
+    {
+        margin: 40px 0;
+        font-size: 1.6rem;
+        line-height: 1.6em;
+        font-weight: 400;
+        color: $d-blue;
+        @media screen and (max-width:768px)
+        {
+            font-size: 1.4rem;
+        }
+        @media screen and (max-width:320px)
+        {
+            margin: 20px 0;    
+        }
+    }
+
+}
+.departments
+{
+    &__h2_title
+    {
+        margin-left: 50px;
+        @media screen  and (max-width:576px){
+            margin-left: 10px;
+        }
+    }
+    &__elems
+    {  
+      display: flex;
+      flex-wrap: wrap;
+      margin: 100px 0;
+    }
+    &__elem
+    {
+        background-color: rgb(237, 237, 238);
+        width: calc(33% - 10px * 2);
+        margin: 0 10px;
+        position: relative;
+        border-bottom: 3px solid $d-blue;
+        @include hover
+        {
+            cursor: pointer;
+            background-color: $white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+            .btn-dep
+            {
+                background-color: $light-b;
+                color: $d-blue;
+                border-color: $light-b;
+            }
+        }
+    }
+    &__img
+    {
+        @include img_width_div(60%, 90%);
+        img
+       { 
+            top: 0;
+            left: 0;
+            transform: translate(5%,-20%);
+        }
+    }
+    &__title
+    {
+        padding-left: 15px;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+    &__descr
+    {
+        
+        margin: 15px 10px 20px 15px;
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: #000;
+        line-height: 1.8em;
+        height: 12rem;
+        overflow: hidden;
+        // white-space: nowrap;
+    }
+    &__students
+    {
+        font-size: 1.6rem;
+        padding: 0 5px 45px 5px;
+        text-align: center;
+        color: $d-blue;
+    }
+    @media screen and (max-width: 900px)
+    {
+        &__elems
+        {  
+          margin: 40px 0 50px 0;
+          display: block;
+        }
+        &__elem
+        {
+            background-color: rgb(237, 237, 238);
+            width: calc(100% - 10px * 2);
+            border-radius: 1.6rem;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            border-bottom: 3px solid $d-blue;
+            position: relative;
+            margin: 20px 0;
+            @include hover
+            {
+                cursor: pointer;
+                background-color: $white;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+                .btn-dep
+                {
+                    background-color: $light-b;
+                    color: $d-blue;
+                    border-color: $light-b;
+                }
+            }
+        }
+        &__img
+        {
+            position: relative;
+            overflow: hidden;
+            padding-top: 0;
+            padding-left: 50%;
+            width: auto;
+            img
+           { 
+               width: auto;
+               min-width: 100%;
+               min-height: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        &__title
+        {
+            height: 20rem;
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+        &__descr
+        {
+            
+            margin: 15px 10px 20px 15px;
+            font-weight: 500;
+            font-size: 1.4rem;
+            color: #000;
+            line-height: 1.8em;
+            height: 12rem;
+            overflow: hidden;
+            display: none;
+        }
+        &__students
+        {
+            font-size: 1.6rem;
+            padding: 0 5px 45px 5px;
+            text-align: center;
+            color: $d-blue;
+            display: none;
+        }
+    }
+    @media screen and (max-width: 576px)
+    {
+        &__img
+        {
+            padding-left: 40%;
+            width: auto;
+            img
+            {
+                width: auto;
+            }
+        }
+        &__title
+        {
+            height: 10rem;
+            font-size: 1.4rem;
+            padding: 10px;
+        }   
+    }
+}
+.btn-dep
+{
+    display: block;
+    position: absolute;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    padding: 5px;
+    bottom: 0;
+    left: 50%;
+    box-shadow: none;
+    transform: translate(-50%, 60%);
+    @media screen and (max-width:900px) 
+    {
+        bottom: 30%;
+        left: 50%;
+        transform: translate(65%, 60%);
+    }
+    @media screen and (max-width:576px) 
+    {
+        left: 25%;
+        
+    }
+    
+}
+
+
+
+// NEWS STYLES
+.post_news
+{
+    &__h2_title
+    {
+        margin-left: 50px;
+        @media screen and (max-width:576px) 
+        {
+            margin-left: 10px;
+        }
+    }
+    
+    &__post
+    {
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        border-bottom: 2px solid #e8e8e8;
+        @media screen and (max-width:576px) 
+        {
+            display: block;
+            padding: 20px 0;
+        }
+    }
+    
+    &__info
+    {
+        font-size: 1.4rem;
+        text-align: end;
+        padding: 10px;
+        color: rgb(180, 179, 179);
+        font-weight: 700;
+        @media screen and (max-width:576px) 
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+    }
+    
+    &__time
+    {
+        display: block;
+    }
+    &__author
+    {
+        display: block;
+        padding-top: 5px;
+        line-height: 1.3em;
+        letter-spacing: 0.1em;
+        @media screen and (max-width:320px) 
+        {
+            padding: 0;
+        }
+    }
+    &__main
+    {
+        padding: 0 75px 0 25px;
+    }
+    &__title
+    {
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: #3e506e;
+       
+    }
+
+    &__text
+    {
+        padding: 20px 0 0 0;
+        font-size: 1.6rem;
+        line-height: 1.6em;
+       @media screen and (max-width:460px){
+           display: none;
+           
+       }
+    }
+    &__link
+    {
+        width: 48px;
+        height: 48px;
+        display: block;
+        position: absolute;
+        top: 0;
+        color: $white;
+        text-align: center;
+        padding-top: 10px;
+        right: 0;
+        transform: translate(-30%, 90%);
+        border: 2px solid transparent;
+        border-radius: 50%;
+        background-color: #9199A1;
+        font-size: 2rem;
+        @include hover
+        {
+            transition: all .4s ease-in-out;
+            color: $d-blue;
+            background-color: $white;
+            border-color: $d-blue;
+        }
+        @media screen and (max-width: 768px)
+        {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 576px)
+    {
+        &__main
+        {
+            padding: 0 20px 0 25px;
+        }
+        &__title
+        {
+            font-size: 2.2rem;
+            margin-bottom: 0;
+        }   
+        &__text
+        {
+            font-size: 1.4rem;
+            padding-top: 10px;
+        }
+    }
+    @media screen and (max-width: 320px)
+    {
+        &__main
+        {
+            padding: 0 5px;
+        }
+        &__title
+        {
+            font-size: 1.6rem;
+        }
+    }
+}
+.read_more
+{
+    padding-left: 10px;
+    display: inline;
+    color: $logo-c;
+    font-weight: 700;
+    font-size: 1.5rem;
+    @include hover
+    {
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+        color: $d-blue;
+    }
+    @media screen and (max-width: 788px)
+    {
+        display: block;
+        padding: 0;  
+        font-size: 1.2rem;
+        padding: 5px;
+        color: $light-b;  
+    }
+    
+    
+}
+.footer
+{
+    background-color: $d-blue;
+    padding: 40px 0 50px 0;
+    font-size: 1.8rem;
+    @media screen and (max-width: 768px){
+        font-size: 1.6rem;
+    }
+    @media screen and (max-width: 320px){
+        font-size: 1.4rem;
+    }
+    h2
+    {
+        padding: 40px 0 30px 30px;
+        color: $white;
+    }
+    .btn
+    {
+        outline: none;
+        text-decoration: none;
+        display: block;
+        padding: 1rem 3rem;
+        font-size: 1.6em;
+        font-family: 'Raleway';
+        font-weight: 700;
+        border: 2px solid transparent;
+        background-color: $white;
+        color: $d-blue;
+        box-shadow: none;
+        @media screen and (max-width: 768px)
+        {
+            width: 70%;
+            margin: 0 auto;
+        }
+        @include hover
+        {
+            background-color: $light-b;
+        }
+    }
+    .subscribe-form
+    {
+        display: flex;
+        justify-content: center;
+        padding: 40px 0;
+        @media screen and (max-width: 768px)
+        {
+            flex-direction: column;
+        }
+    }
+    p
+    {
+        margin: 0 auto;
+    }
+    input
+    {
+        color: #fff;
+        background-color: #eee;
+        border-radius: 5px;
+        outline: none;
+        border: 2px solid transparent;
+        padding: 15px 20px;
+        margin: 0 10px;
+        font-size: 18px;
+        max-width: 400px;
+        width: 100%;
+       
+        @include hover
+        {
+            background-color: $white;
+            border-color: $d-blue;
+        }
+        @media screen and (max-width: 768px)
+
+       { margin: 0 auto;
+        max-width: none;
+        width: 70%;
+        margin-bottom: 10px;}
+    }
+   &__socials
+   {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    font-size: 2.6rem;
+    li
+   {
+        display: inline-block;
+        margin: 0 5px;
+        a
+        {
+            display: flex;
+            width: 60px;
+            height: 60px;
+            background-color: #bec9db;
+            color: #fff;
+            border-radius: 50%;
+            border: 3px solid transparent;
+        @media screen and (max-width: 320px)
+            {
+                width: 48px;
+                height: 48px;
+            }
+            i
+            {
+                margin: auto;
+            }
+        }
+        @include hover
+        {
+            a
+            {
+                transition: all .3s ease-in-out;    
+                text-decoration: none;
+                background-color: $white;
+                border-color: $d-blue;
+                color: $d-blue
+            }
+        }
+    }
+    @media screen and (max-width: 320px)
+    {
+     
+        font-size: 1.8rem;
+    }
+   }
+   
+    &__nav
+    {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+        margin-bottom: 30px; 
+        padding: 0;
+        @media screen and (max-width: 576px)
+        {
+            display: block;
+            margin: 0 auto;
+        }
+        a 
+        {
+            color: $white;
+            @include hover
+            {  
+                text-decoration: none;
+            }
+            @media screen and (max-width: 768px) {
+                font-size: 1.6rem;
+            }
+        }
+        li
+        {
+            display: inline-block;
+            @media screen and (max-width: 576px)
+            {
+                display: block;
+                margin: 10px 0;
+            }
+            &:after
+            {
+                content: '';
+                display: block;
+                width: 70%;
+                margin: 5px auto;
+                border-bottom: 2px solid transparent;
+                @media screen and (max-width: 320px)
+                {
+                    display: none;
+                }
+            }
+            @include hover
+            {
+
+                &:after
+                {
+                    transition: all 0.3s ease-in-out;
+                    border-bottom: 2px solid $white;
+                }
+
+            }
+        }
+    }
+    
+    
+   &__copyright
+   {
+       padding-top: 40px;
+       display: flex;
+       justify-content: center;
+       span
+       {
+           display: block;
+           color: $white;
+           font-size: 1.4rem;
+            padding: 0 20px;
+            border-right: 1px solid rgba(255, 255, 255, 0.6);
+       } 
+       #last
+       {
+           border-right: none;
+       }
+   }
+
+}
+.footer__nav.navbar--mine
+    {
+        @media screen and (max-width: 991px)
+        {position: relative;}
+        a
+        {
+            @include hover
+            {
+                color: $white;
+            }
+        }
+    }

@@ -1,0 +1,48 @@
+.post_news--page
+{
+    padding: 40px 0;
+    &__post
+    {
+        display: block;
+    }
+    .post_news__main
+    {
+        @media screen and (max-width: 768px) 
+        {
+            padding: 0 20px;    
+        }
+    }
+    &__content
+    {
+        display: flex;
+        margin: 40px 0;
+        @media screen and (max-width: 576px) 
+        {
+            display: block;   
+        }
+        @media screen and (max-width: 420px) 
+        {
+            margin: 15px 0 25px 0;   
+        }
+    }
+    &__img
+    {
+        overflow: hidden;
+        position: relative;
+        width: 80%;
+        padding-top: 50%;
+        margin: 0 auto;
+        @media screen and (max-width: 420px) 
+        {
+            display: none;   
+        }
+        img
+        {
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}

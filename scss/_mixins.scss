@@ -1,0 +1,43 @@
+@mixin tr
+{
+    transition: all .3s ease-in-out;
+}
+@mixin hover 
+{
+    
+    &:hover,
+    &:focus,
+    &:active
+    {
+        transition: all .3s ease-in-out;
+        @content;
+    }
+}
+
+@mixin img_center
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin media($w)
+{
+   @media screen and (max-width: $w) 
+   {
+       @content;
+   }
+}
+@mixin img_width_div($p, $width)
+{
+        width: 100%; 
+        position: relative;
+        padding-top: $p;
+       
+        img
+        {
+            width: $width;
+            height: 100%;
+            position: absolute;
+        }
+}

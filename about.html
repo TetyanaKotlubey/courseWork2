@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Факультет інформаційних технологій</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/about_page.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+   <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="nav--mine">
+                <a class="navbar-brand navbar--mine__logo" href="index.html">
+                    <svg  width="60" height="62">
+                        <use xlink:href="#logo"/>
+                    </svg>
+                    <span>FIT</span>
+                </a>
+                <!-- Menu -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                      <ul class="collapse navbar-collapse  navbar--mine navbar-nav" id="navbarNavDropdown">
+                        <li>
+                          <a href="index.html">Головна<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#">Про нас</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="news.html">Новини</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacts.html"> Контакти</a>
+                          </li>
+                      </ul>
+                    </nav>
+                </div>
+            <!-- End of Nav -->
+            <!-- Greetings Block -->
+            <div class="head_info">
+                <h1 class="head_info__title">Факультет інформаційних технологій</h1>
+                <div class="head_info__descr">Наша місія - підготовка висококваліфікованих фахівців, здатних до розв’язання складних задач у сфері інформаційних технологій.
+                </div>
+            </div>
+        </div>  
+   </header>
+
+   <main class="main" id="main">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Sidebar -->
+                <aside class="col-md-3 sidebar--left">
+                    <div class="widget widget_categories">
+                        <!-- Categories -->
+                        <div class="widget widget_search">
+                            <h4>Пошук</h4>
+                            <form action="#">
+                               <input id="s" type="text" onfocus="if (this.value == 'Search here...') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Search here...'; }" value="Search here...">
+                               <input type="submit" id="searchsubmit" value="">
+                            </form>
+                         </div>
+                        <ul>
+                            <li><a href="">Головні новини</a></li>
+                            <li><a href="">Досягнення</a></li>
+                            <li><a href="">Заходи</a></li>
+                            <li><a href="">Дистанційне навчання</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <div class="col-md-9 ">
+                    <section class="about">
+                        <h2 class="h2__title">Про Факультет</h2>
+                        <p>  
+                            Факультет інформаційних технологій був створений у вересні 2001 року згідно наказу Міністерства освіти і науки України. 
+                            Це рішення обумовлене значною потребою промисловості, бізнесу і інших сфер діяльності у фахівцях, які володіють знаннями в області
+                            автоматики, електронної і комп’ютерної техніки, можуть вирішувати актуальні завдання в енергетиці, металургії, машинобудуванні, сільському господарстві, галузі обробки інформації. 
+                            Деканом факультету було обрано д.т.н., професора С.В. Гулакова. З 2010 по 2020 рік деканом факультету був доктор економічних наук, 
+                            професор Верескун Михайло Вікторович. У 2020 році факультет очолила кандидат технічних наук, доцент Балалаєва Олена Юріївна.
+                        </p>
+                        <p>
+                            На факультеті організацією учбового процесу, педагогічною і науковою роботою займаються висококваліфіковані викладачі:
+                            4 доктори технічних, економічних і фізико-математичних наук, 6 професорів, 21 кандидат наук, доцент, 45 старших викладачів і асистентів.
+                        </p>
+                            <div class="gallery__img">
+                                <img src="img/pic.jpg" alt="Pic">
+                            </div>
+                        <p>
+                            На кафедрах працює магістратура і аспірантура, де найбільш талановиті студенти мають нагоду отримати кваліфікацію магістра, а після захисту дисертації – науковий ступінь.
+                        </p>
+                        <p>
+                            У розпорядженні студентів факультету спеціалізовані лабораторії, 
+                            обладнані сучасною вітчизняною і імпортною технікою, комп’ютерами з виходами до Інтернету і загальноуніверситетської мережі, 
+                            мультимедійною і іншою спеціалізованою технікою, що дозволяє успішно вивчати і освоювати сучасні інформаційні технології.
+                        </p>
+                            <ul class="gallery__imgs">
+                                <li>
+                                   <div> <img src="img/newa.jpg" alt="Graduation"></div>
+                                </li>
+                                <li>
+                                   <div><img src="img/lecture.jpg" alt="Lecture"></div>
+                                </li>
+                                <li>
+                                   <div> <img src="img/online.jpg" alt="Online"></div>
+                                </li>
+                                <li>
+                                   <div> <img src="img/CS.jpg" alt="Computer Science"></div>
+                                </li>
+                            </ul>
+                        <p>
+                            Спеціальності, які отримають студенти факультету є найбільш затребуваними у сучасному суспільстві, 
+                            діяльність якого базується на інформаційних технологіях. Фахівці з інформаційних технологій вирішують завдання проектування і експлуатації інформаційних систем 
+                            і постановки завдань створення інформаційних систем з застосуванням сучасних методів та новітніх засобів програмування.
+                        </p>
+                    </section>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container-fluid col-12">
+            <h2 class="h2__title">Розсилка</h2>
+            <p style="text-align: center;color: #fff;">Якщо ви хочете почути перше і отримувати оновлення, підпишиться на нашу розсилку. </p> 
+            <form action="" method="POST" class="subscribe-form">
+                <input type="email" name="email" placeholder="email address" class="footer__input">
+                <button type="submit" class="btn">Підписатися</button>
+            </form>
+            <ul class="footer__nav navbar--mine">
+                <li><a href="#">Про нас</a></li>
+                <li><a href="news.html">Новини</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+            <ul class="footer__socials">
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>  
+            </ul>
+            <div class="footer__copyright">
+                <span>Copyright © 2020 FIT</span>
+                <span id="last">Designed by Tetyana Kotlubey</span>
+            </div>
+    </footer>
+
+
+
+    <svg style="display: none;">
+        <symbol  id="logo" viewBox="0 0 303.393 303.393">
+                <path d="M295.391,303.393h-82.11c-4.418,0-8-3.582-8-8s3.582-8,8-8h74.11V16H130.79v28.182c0,4.418-3.582,8-8,8s-8-3.582-8-8V8
+                c0-4.418,3.582-8,8-8h172.601c4.418,0,8,3.582,8,8v287.393C303.391,299.811,299.809,303.393,295.391,303.393z M122.79,303.393
+                c-0.059,0-0.118-0.001-0.177-0.002H65.42c-4.418,0-8-3.582-8-8s3.582-8,8-8h49.37v-36.742H8.002c-4.418,0-8-3.582-8-8V78.426
+                c0-4.418,3.582-8,8-8h229.574c4.418,0,8,3.582,8,8v164.223c0,4.418-3.582,8-8,8H130.79v36.742h49.369c4.418,0,8,3.582,8,8
+                s-3.582,8-8,8h-57.192C122.907,303.392,122.849,303.393,122.79,303.393z M122.79,234.648h106.786V86.426H16.002v148.223H122.79z
+                M185.68,183.61H59.897c-4.418,0-8-3.582-8-8s3.582-8,8-8H185.68c4.418,0,8,3.582,8,8S190.098,183.61,185.68,183.61z
+                M157.376,153.466H88.2c-4.418,0-8-3.582-8-8s3.582-8,8-8h69.176c4.418,0,8,3.582,8,8S161.794,153.466,157.376,153.466z"/>
+        </symbol>
+    </svg>
+</body>
+</html>

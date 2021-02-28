@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'mixins';
+.single_post
+{
+    padding: 30px 15px;
+    .post_news--page__img
+    {
+        margin-top: 30px;
+    }
+    .post_news__text
+    {
+        @media screen and (max-width: 460px) {
+            display: block;
+        }
+    }
+}
